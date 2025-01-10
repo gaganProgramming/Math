@@ -277,11 +277,11 @@ button:active {
 }
 
 `````````````````
-### <a name="head4">4.Forms</a>
+### <a name="head4">4. Forms</a>
 ``````````````````````````css
- Algorithm of Forms
+Algorithm of Forms
 Html
-1. Forms id, label for= elementName,  [input types = email, password, tel, submit]
+1. Forms id, label for= elementName,  [input types = email, password, tel, submit], required
 2. one more div to display error msg, and css -color, font-size
 
  Js
