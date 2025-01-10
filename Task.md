@@ -2,6 +2,7 @@
 1. [Counter](#head1)
 2. [Random Number Generator](#head2)
 3. [Calculator](#head3)
+4. [Forms](#head4)
 
 
 ### <a name="head1">1. Counter</a>
@@ -276,7 +277,7 @@ button:active {
 }
 
 `````````````````
-# Forms
+### <a name="head1">4.Forms</a>
 ``````````````````````````css
  Algorithm of Forms
 Html
