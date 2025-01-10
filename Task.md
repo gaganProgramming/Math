@@ -280,7 +280,7 @@ button:active {
 ``````````````````````````css
  Algorithm of Forms
 Html
-1. Forms id, [input types = email, password, tel, submit]
+1. Forms id, label for= elementName,  [input types = email, password, tel, submit]
 2. one more div to display error msg, and css -color, font-size
 
  Js
