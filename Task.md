@@ -276,7 +276,111 @@ button:active {
 }
 
 `````````````````
+# Forms
+``````````````````````````css
+ Algorithm of Forms
+Html
+1. Forms id, [input types = email, password, tel, submit]
+2. one more div to display error msg, and css -color, font-size
 
+ Js
+1. Add Event Listener for Form Submission, addEventListener(), event.preventDefault()
+2. Clear Previous Errors, textContent- clearing error
+3. Validate Each Field- email(@), password(10-14), confirm password(value)
+4. PhoneNumberValidation, Check Validation Result
+5. Check Validation Result- isValid, this.submit
+````````````````````````````````````````````````````````````````
+``````````````````````
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error"></div><br>
+
+        <label for="password">Password (10-14 characters):</label>
+        <input type="password" id="password" name="password" required>
+        <div id="passwordError" class="error"></div><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="confirmPasswordError" class="error"></div><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" maxlength="10" required>
+        <div id="phoneError" class="error"></div><br>
+        <label for="password">Email:</label>
+        
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous errors
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+            document.getElementById("confirmPasswordError").textContent = "";
+            document.getElementById("phoneError").textContent = "";
+
+            let isValid = true;
+
+            // Email validation
+            const email = document.getElementById("email").value;
+            if (!email.includes("@")) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById("password").value;
+            if (password.length < 10 || password.length > 14) {
+                document.getElementById("passwordError").textContent = "Password must be between 10 and 14 characters.";
+                isValid = false;
+            }
+
+            // Confirm password validation
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").textContent = "Passwords do not match.";
+                isValid = false;
+            }
+
+            // Phone number validation
+            const phone = document.getElementById("phone").value;
+            const phonePattern = /^[6789]\d{9}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").textContent = "Phone number must start with 6, 7, 8, or 9 and be 10 digits long.";
+                isValid = false;
+            }
+
+            // Submit form if valid
+            if (isValid) {
+                alert("Form submitted successfully!");
+                // You can proceed with the form submission or further processing here.
+                this.submit();
+            }
+        });
+    </script>
+</body>
+</html>
+
+```````````````````````````
 
 
 
