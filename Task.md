@@ -80,6 +80,24 @@ document.getElementById('resetBtn').addEventListener('click', reset);
 </html>
 ``````````````
 
+Algorithm
+``````````````````css
+Algorithm Steps for Random Number Generator
+1. Select DOM Elements
+Select the button element with the ID myButton and store it in the variable myButton.
+Select the label elements with IDs label1, label2, and label3 and store them in an array called labels.
+2. Define Range for Random Number
+Create a variable min and set it to 0 (minimum value for the random number).
+Create a variable max and set it to 6 (maximum range for the random number generation).
+3. Function to Generate a Random Number
+Function: generateRandomNumber()
+Generate a random number between min and max using the formula:
+Math.floor(Math.random() * max) + min;
+Return the generated random number.
+4. Function to Update Labels with Random Numbers
+5. Add Event Listener to the Button
+
+````````````````````
 
 ``````````````js
 const myButton = document.getElementById('myButton');
