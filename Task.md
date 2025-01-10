@@ -277,7 +277,7 @@ button:active {
 }
 
 `````````````````
-### <a name="head1">4.Forms</a>
+### <a name="head4">4.Forms</a>
 ``````````````````````````css
  Algorithm of Forms
 Html
