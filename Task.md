@@ -26,10 +26,10 @@
 
 Algorithm
 
-`````````````````
+`````````````````css
 1. Initialize CounterValue to 0, store dom element in counterDisplay
 2. Define Functions for Counter Operations, increment(), decrement reset and call update in each functions
-3. Function to Update Counter Display, set textContent of counterDisplay to counterValue
+3. Function to Update Counter Display, set textContent of counterDisplay to current counterValue
 4. Add Event Listeners to Buttons, click and functions
 
 ``````````````````
