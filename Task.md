@@ -24,6 +24,16 @@
 </html>
 ``````````````
 
+Algorithm
+
+`````````````````
+1. Initialize CounterValue to 0, store dom element in counterDsplay
+2. Define Functions for Counter Operations, increment(), decrement reset and call update in each functions
+3. Function to Update Counter Display, set textContent of counterdisplay to counterValue
+4. Add Event Listeners to Buttons, click and functions
+
+``````````````````
+
 
 ``````````````js
 let counterValue = 0;
