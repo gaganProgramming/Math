@@ -84,7 +84,7 @@ Algorithm
 ``````````````````css
 Algorithm Steps for Random Number Generator
 1. Select DOM Elements store d store it in the variable myButton.
-2.Select the label elements with IDs label1, label2, and label3 and store them in an array called labels.
+2. Select the label elements with IDs label1, label2, and label3 and store them in an array called labels.
 3. Define Range for Random Number [0, 6]
 4. Function to Generate a Random Number return Math.floor(Math.random() * max) + min;
 5. Function to Update Labels with Random Numbers
