@@ -1,6 +1,6 @@
 # Flex box
 
-````````````````````c++
+````````````````````md
 [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) -> Items arranged to left to right horizontally
 
 1. Create div.container>div.item*5
