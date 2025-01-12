@@ -1,7 +1,7 @@
 # Flex box
-
+[Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) 
 ````````````````````md
-[Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) -> Items arranged to left to right horizontally
+flexbox-> Items arranged to left to right horizontally
 
 1. Create div.container>div.item*5
 2. style for .item{height, width, border, margin, background-color}
