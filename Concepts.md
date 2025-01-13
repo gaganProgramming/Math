@@ -1,4 +1,8 @@
-# Flex box
+
+# CSS
+[Display properties](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+### Flex box
 [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) 
 ````````````````````md
 flexbox-> Items arranged to left to right horizontally
