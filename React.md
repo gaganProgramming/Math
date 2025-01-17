@@ -51,4 +51,93 @@ Here is a more detailed table with additional React concepts, definitions, and s
 | 24         | **Forward Refs**              | Passing refs through components to directly access a child’s DOM node.                       | `const FancyButton = React.forwardRef((props, ref) => <button ref={ref}>{props.children}</button>);`  |
 | 25         | **Prop Types**                | Used for type checking the props passed to components.                                       | `Component.propTypes = { title: PropTypes.string };`                                                  |
 
-Let me know if you'd like even more details, further explanations, or assistance with a specific concept!
+
+
+# JavaScript
+
+| **S. No.** | **JavaScript Concept**           | **Definition**                                                                                         | **Syntax/Example**                                                                                     |
+|------------|-----------------------------------|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| 1          | **Variables**                    | Containers for storing data values, declared using `var`, `let`, or `const`.                        | `let x = 10; const pi = 3.14;`                                                                          |
+| 2          | **Data Types**                   | The types of values in JavaScript, such as `String`, `Number`, `Boolean`, `Object`, `Array`, etc.   | `typeof "Hello"; // string`                                                                            |
+| 3          | **Functions**                    | Blocks of reusable code that perform a specific task.                                               | `function greet(name) { return "Hello, " + name; }`                                                    |
+| 4          | **Arrow Functions**              | A concise way to write functions using the `=>` syntax.                                             | `const add = (a, b) => a + b;`                                                                          |
+| 5          | **Objects**                      | Collections of key-value pairs, used to store structured data.                                      | `const person = { name: "John", age: 30 };`                                                            |
+| 6          | **Arrays**                       | Ordered collections of values, which can be of any type.                                            | `const fruits = ["Apple", "Banana", "Cherry"];`                                                        |
+| 7          | **Template Literals**            | String literals allowing embedded expressions using backticks (`).                                   | `` const greeting = `Hello, ${name}!`; ``                                                              |
+| 8          | **Destructuring**                | A shorthand for extracting values from arrays or properties from objects.                          | `const { name, age } = person; const [first, second] = fruits;`                                        |
+| 9          | **Spread Operator**              | Expands an array or object into individual elements or properties.                                  | `const newFruits = [...fruits, "Grape"];`                                                              |
+| 10         | **Rest Operator**                | Collects multiple elements into an array or object.                                                | `function sum(...nums) { return nums.reduce((a, b) => a + b, 0); }`                                    |
+| 11         | **Promises**                     | Objects representing the eventual completion or failure of an asynchronous operation.               | `const promise = new Promise((resolve, reject) => resolve("Success!"));`                              |
+| 12         | **Async/Await**                  | Simplifies working with Promises, allowing for asynchronous code to look synchronous.              | `async function fetchData() { const data = await fetch(url); }`                                        |
+| 13         | **Event Listeners**              | Methods to handle user actions like clicks or keypresses.                                           | `button.addEventListener("click", () => alert("Clicked!"));`                                           |
+| 14         | **DOM Manipulation**             | Accessing and modifying HTML elements via JavaScript.                                               | `document.getElementById("header").textContent = "New Header";`                                        |
+| 15         | **Closures**                     | A function that remembers its lexical scope even when executed outside that scope.                 | `function outer() { let count = 0; return function inner() { count++; return count; }; }`              |
+| 16         | **Hoisting**                     | A behavior where variable and function declarations are moved to the top of their scope.            | `console.log(x); var x = 5; // undefined`                                                              |
+| 17         | **Callbacks**                    | Functions passed as arguments to other functions and executed later.                               | `setTimeout(() => console.log("Delayed!"), 1000);`                                                     |
+| 18         | **Modules**                      | Encapsulating code into files and importing/exporting them as needed.                              | `export const add = (a, b) => a + b; import { add } from './math.js';`                                 |
+| 19         | **Classes**                      | Templates for creating objects, with properties and methods.                                        | `class Person { constructor(name) { this.name = name; } greet() { return "Hi, " + this.name; } }`      |
+| 20         | **Inheritance**                  | A way for one class to extend another class, inheriting its properties and methods.                | `class Employee extends Person { constructor(name, role) { super(name); this.role = role; } }`        |
+| 21         | **Events**                       | Actions or occurrences recognized by JavaScript, like `click`, `load`, or `input`.                 | `<button onclick="sayHello()">Click Me</button>`                                                       |
+| 22         | **Error Handling**               | Mechanism to handle runtime errors using `try`, `catch`, and `finally`.                            | `try { riskyFunction(); } catch (err) { console.error(err); } finally { console.log("Done."); }`       |
+| 23         | **Type Conversion**              | Converting data types explicitly or implicitly.                                                    | `Number("10"); // 10, String(123); // "123"`                                                           |
+| 24         | **Map**                          | A collection of key-value pairs with unique keys.                                                  | `const map = new Map(); map.set("key", "value");`                                                      |
+| 25         | **Set**                          | A collection of unique values.                                                                     | `const set = new Set([1, 2, 2, 3]);`                                                                   |
+| 26         | **LocalStorage/SessionStorage**  | Web storage APIs for persisting data in the browser.                                               | `localStorage.setItem("key", "value");`                                                                |
+| 27         | **JSON**                         | A lightweight data format for exchanging data.                                                     | `const json = JSON.stringify(obj); const obj = JSON.parse(json);`                                      |
+| 28         | **Strict Mode**                  | A way to enforce stricter parsing and error handling in JavaScript code.                           | `'use strict'; x = 3.14; // Error`                                                                     |
+| 29         | **Fetch API**                    | A modern way to make HTTP requests.                                                               | `fetch(url).then(response => response.json()).then(data => console.log(data));`                        |
+| 30         | **Regular Expressions (Regex)**  | Patterns for matching and manipulating strings.                                                    | `const regex = /[A-Z]/; regex.test("Hello"); // true`                                                  |
+
+Here's a deeper dive into **Array Manipulation** and **Object Manipulation**, which are essential skills in JavaScript for handling data effectively.
+
+---
+
+### **Array Manipulation**
+
+| **Operation**             | **Definition**                                                                                                                                      | **Syntax/Example**                                                                                                   |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| **Push**                  | Adds elements to the end of an array.                                                                                                           | `const arr = [1, 2]; arr.push(3); // [1, 2, 3]`                                                                      |
+| **Pop**                   | Removes and returns the last element of an array.                                                                                               | `const last = arr.pop(); // last = 3, arr = [1, 2]`                                                                  |
+| **Shift**                 | Removes and returns the first element of an array.                                                                                             | `const first = arr.shift(); // first = 1, arr = [2]`                                                                 |
+| **Unshift**               | Adds elements to the beginning of an array.                                                                                                    | `arr.unshift(0); // [0, 1, 2]`                                                                                       |
+| **Slice**                 | Returns a shallow copy of a portion of an array without modifying it.                                                                          | `const sliced = arr.slice(1, 3); // [2, 3]`                                                                          |
+| **Splice**                | Adds/removes elements from an array and modifies the original array.                                                                           | `arr.splice(1, 1, "new"); // Removes 1 element at index 1, adds "new"`                                               |
+| **Map**                   | Creates a new array by applying a function to each element.                                                                                    | `const doubled = arr.map(num => num * 2);`                                                                           |
+| **Filter**                | Creates a new array with elements that pass a test.                                                                                           | `const even = arr.filter(num => num % 2 === 0);`                                                                     |
+| **Reduce**                | Reduces an array to a single value by applying a function iteratively.                                                                         | `const sum = arr.reduce((acc, curr) => acc + curr, 0);`                                                              |
+| **Find**                  | Returns the first element that satisfies a condition.                                                                                         | `const found = arr.find(num => num > 10);`                                                                           |
+| **Sort**                  | Sorts the elements of an array in place (default is lexicographical order).                                                                   | `arr.sort((a, b) => a - b);`                                                                                         |
+| **Includes**              | Checks if an array contains a specified value.                                                                                               | `arr.includes(2); // true`                                                                                           |
+| **Flat**                  | Flattens a nested array to a specified depth.                                                                                                | `const flat = [[1, 2], [3, 4]].flat(); // [1, 2, 3, 4]`                                                              |
+| **Concat**                | Merges two or more arrays without modifying them.                                                                                            | `const merged = arr.concat([4, 5]);`                                                                                 |
+
+---
+
+### **Object Manipulation**
+
+| **Operation**             | **Definition**                                                                                           | **Syntax/Example**                                                                                       |
+|---------------------------|-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| **Create Object**         | Define an object using literal syntax or `Object()` constructor.                                       | `const obj = { name: "John", age: 30 };`                                                                 |
+| **Access Properties**     | Access values using dot or bracket notation.                                                         | `obj.name; // "John", obj["age"]; // 30`                                                                 |
+| **Add/Update Property**   | Add or modify properties dynamically.                                                                | `obj.city = "New York"; obj.age = 31;`                                                                   |
+| **Delete Property**       | Removes a property from an object.                                                                   | `delete obj.city;`                                                                                       |
+| **Object.keys()**         | Returns an array of an object's property names (keys).                                               | `Object.keys(obj); // ["name", "age"]`                                                                   |
+| **Object.values()**       | Returns an array of an object's values.                                                              | `Object.values(obj); // ["John", 30]`                                                                    |
+| **Object.entries()**      | Returns an array of key-value pairs.                                                                 | `Object.entries(obj); // [["name", "John"], ["age", 30]]`                                                |
+| **Spread Operator**       | Creates a shallow copy or merges objects.                                                            | `const newObj = { ...obj, country: "USA" };`                                                             |
+| **Destructuring**         | Extracts properties into variables.                                                                  | `const { name, age } = obj;`                                                                             |
+| **Object.freeze()**       | Prevents adding, deleting, or modifying properties.                                                  | `Object.freeze(obj); obj.name = "Mike"; // Error in strict mode`                                         |
+| **Object.seal()**         | Prevents adding or removing properties but allows modification of existing ones.                     | `Object.seal(obj); obj.name = "Mike"; // Works, but new properties can't be added`                       |
+| **Merge Objects**         | Combines two or more objects.                                                                        | `const merged = Object.assign({}, obj1, obj2);`                                                          |
+| **Check Property**        | Verifies if a property exists in an object.                                                          | `'name' in obj; // true`                                                                                 |
+| **Object.fromEntries()**  | Converts key-value pairs into an object.                                                             | `const obj = Object.fromEntries([["name", "John"], ["age", 30]]);`                                       |
+| **For...in Loop**         | Iterates through object properties.                                                                 | `for (let key in obj) { console.log(key, obj[key]); }`                                                   |
+
+---
+
+### Key Notes:
+1. **Efficiency**: Use methods like `map` and `filter` over `for` loops for readability and functional programming.
+2. **Immutability**: Avoid mutating original arrays/objects. Prefer creating new ones using `spread` or `Object.assign`.
+3. **Nested Structures**: When dealing with deeply nested arrays/objects, libraries like `Lodash` or using `reduce` can simplify manipulation.
+
+
