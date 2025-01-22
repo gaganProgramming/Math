@@ -1,4 +1,4 @@
-
+# HTML
 
 
 ### 1. **Basic Structure of HTML**  
@@ -155,6 +155,8 @@
      <time datetime="2025-01-23">January 23, 2025</time>
      ```
 
+
+# CSS
 ### 1. **Inline, Internal & External CSS**  
    - **Inline CSS**: Add styles directly to an element using the `style` attribute.  
      ```html
@@ -403,7 +405,7 @@
      - Features: Frames, Components, Prototypes, and Design Grids.  
      - Allows collaboration and exporting designs for development.  
 
-
+# JAVASCRIPT
 
 ### 1. **JavaScript Variables, Datatypes, and Objects**  
    - **Variables**: Declare using `var`, `let`, or `const`.  
@@ -652,7 +654,7 @@
 
 
 
-
+# React
 
      ### 1. **Introduction to React and Why Use React?**  
    React is a JavaScript library for building user interfaces, developed by Facebook.  
@@ -878,7 +880,7 @@
 
 
 
-
+# NEXT JS
 ### 1. **Introduction to Next.js and File-Based Routing**  
    **Next.js** is a React framework for building server-rendered and statically generated applications. It simplifies development with features like pre-rendering, routing, and API integration.  
    - **File-Based Routing**: The `pages` directory defines the app's routes. Each file corresponds to a route. For example:
