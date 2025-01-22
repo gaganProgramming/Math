@@ -1,3 +1,410 @@
+
+
+
+### 1. **Basic Structure of HTML**  
+   - HTML documents begin with a `<!DOCTYPE html>` declaration.  
+   - Standard structure:  
+     ```html
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document Title</title>
+     </head>
+     <body>
+       <!-- Content goes here -->
+     </body>
+     </html>
+     ```
+
+---
+
+### 2. **Headings, Paragraphs, and Links**  
+   - **Headings**:  
+     ```html
+     <h1>Main Heading</h1>
+     <h2>Sub-heading</h2>
+     ```
+   - **Paragraphs**:  
+     ```html
+     <p>This is a paragraph.</p>
+     ```
+   - **Links**:  
+     ```html
+     <a href="https://example.com">Click here</a>
+     ```
+
+---
+
+### 3. **Images, Lists, and Tables**  
+   - **Images**:  
+     ```html
+     <img src="image.jpg" alt="Description" />
+     ```
+   - **Lists**:  
+     - Ordered:  
+       ```html
+       <ol>
+         <li>First item</li>
+         <li>Second item</li>
+       </ol>
+       ```
+     - Unordered:  
+       ```html
+       <ul>
+         <li>Item one</li>
+         <li>Item two</li>
+       </ul>
+       ```
+   - **Tables**:  
+     ```html
+     <table>
+       <tr>
+         <th>Header</th>
+         <th>Header</th>
+       </tr>
+       <tr>
+         <td>Data</td>
+         <td>Data</td>
+       </tr>
+     </table>
+     ```
+
+---
+
+### 4. **SEO and Core Web Vitals**  
+   - **SEO**: Use meta tags, structured data, and semantic HTML to improve search engine visibility.  
+     ```html
+     <meta name="description" content="An example website." />
+     ```
+   - **Core Web Vitals**: Metrics like LCP, FID, and CLS for performance.  
+
+---
+
+### 5. **Forms and Input Tags**  
+   - Basic form structure:  
+     ```html
+     <form action="/submit" method="post">
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="name" required />
+       <button type="submit">Submit</button>
+     </form>
+     ```
+
+---
+
+### 6. **Inline and Block Elements in HTML**  
+   - **Inline**: Does not start on a new line (e.g., `<span>`, `<a>`, `<img>`).  
+   - **Block**: Starts on a new line and takes up full width (e.g., `<div>`, `<p>`, `<h1>`).  
+
+---
+
+### 7. **ID and Class**  
+   - **ID**: Unique identifier for a single element.  
+     ```html
+     <div id="unique">Content</div>
+     ```
+   - **Class**: Can be shared across multiple elements.  
+     ```html
+     <div class="shared">Content</div>
+     ```
+
+---
+
+### 8. **Video, Audio, and Media in HTML**  
+   - **Video**:  
+     ```html
+     <video controls>
+       <source src="video.mp4" type="video/mp4">
+     </video>
+     ```
+   - **Audio**:  
+     ```html
+     <audio controls>
+       <source src="audio.mp3" type="audio/mp3">
+     </audio>
+     ```
+
+---
+
+### 9. **Semantic Tags in HTML**  
+   - Tags that convey meaning:  
+     ```html
+     <header>Header content</header>
+     <main>Main content</main>
+     <footer>Footer content</footer>
+     <article>Article content</article>
+     ```
+
+---
+
+### 10. **Entities, Code Tag, and More**  
+   - **Entities**: For special characters.  
+     ```html
+     &copy; &lt; &gt;
+     ```
+   - **Code Tag**: Display code snippets.  
+     ```html
+     <code>console.log("Hello World!");</code>
+     ```  
+   - **Other Useful Tags**:  
+     ```html
+     <abbr title="World Health Organization">WHO</abbr>
+     <mark>Highlighted text</mark>
+     <time datetime="2025-01-23">January 23, 2025</time>
+     ```
+
+### 1. **Inline, Internal & External CSS**  
+   - **Inline CSS**: Add styles directly to an element using the `style` attribute.  
+     ```html
+     <p style="color: blue;">Hello, World!</p>
+     ```
+   - **Internal CSS**: Write CSS within a `<style>` tag in the `<head>`.  
+     ```html
+     <style>
+       p { color: red; }
+     </style>
+     ```
+   - **External CSS**: Use a separate `.css` file linked with a `<link>` tag.  
+     ```html
+     <link rel="stylesheet" href="styles.css">
+     ```
+
+---
+
+### 2. **CSS Selectors**  
+   - **Types**:  
+     - Universal: `*`  
+     - Element: `h1, p`  
+     - Class: `.classname`  
+     - ID: `#idname`  
+     - Attribute: `[type="text"]`  
+     - Pseudo-classes: `:hover`, `:nth-child()`.  
+
+---
+
+### 3. **CSS Box Model: Margin, Padding & Borders**  
+   - **Content**: The inner text or image.  
+   - **Padding**: Space between content and border.  
+   - **Border**: Surrounds padding.  
+   - **Margin**: Space outside the border.  
+     ```css
+     div {
+       margin: 10px;
+       padding: 20px;
+       border: 2px solid black;
+     }
+     ```
+
+---
+
+### 4. **CSS Fonts, Text & Color Properties**  
+   - Fonts: `font-family`, `font-size`, `font-weight`.  
+   - Text: `text-align`, `text-transform`, `line-height`.  
+   - Colors: `color`, `background-color`.  
+
+---
+
+### 5. **Specificity and Cascade**  
+   - **Specificity**: Determines which CSS rule applies. Inline > ID > Class > Element.  
+   - **Cascade**: Later rules overwrite earlier ones if equally specific.  
+
+---
+
+### 6. **Sizing Units**  
+   - `px`: Absolute pixels.  
+   - `rem`: Relative to the root font size.  
+   - `em`: Relative to the parent element.  
+   - `%`: Relative to the containing element.  
+   - `vh`, `vw`: Viewport height and width.  
+
+---
+
+### 7. **Display Property**  
+   - `block`, `inline`, `inline-block`, `none`, `flex`, `grid`.  
+     ```css
+     div {
+       display: flex;
+     }
+     ```
+
+---
+
+### 8. **Shadows and Outlines**  
+   - Box Shadow:
+     ```css
+     box-shadow: 2px 2px 5px gray;
+     ```
+   - Text Shadow:
+     ```css
+     text-shadow: 1px 1px 2px black;
+     ```
+
+---
+
+### 9. **Styling Lists**  
+   - Customize bullet points or numbers with `list-style`.  
+     ```css
+     ul {
+       list-style: square;
+     }
+     ```
+
+---
+
+### 10. **Overflow Property**  
+   - Controls content overflowing an element.  
+     - `visible`, `hidden`, `scroll`, `auto`.  
+
+---
+
+### 11. **Position Property**  
+   - Types: `static`, `relative`, `absolute`, `fixed`, `sticky`.  
+     ```css
+     div {
+       position: absolute;
+       top: 50px;
+       left: 100px;
+     }
+     ```
+
+---
+
+### 12. **Design This Card**  
+   - A basic card structure:
+     ```css
+     .card {
+       width: 300px;
+       padding: 20px;
+       border: 1px solid #ccc;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       border-radius: 10px;
+     }
+     ```
+
+---
+
+### 13. **CSS Variables**  
+   - Define reusable variables with `--`.  
+     ```css
+     :root {
+       --primary-color: blue;
+     }
+     h1 {
+       color: var(--primary-color);
+     }
+     ```
+
+---
+
+### 14. **Media Queries**  
+   - Make designs responsive:
+     ```css
+     @media (max-width: 600px) {
+       body {
+         font-size: 14px;
+       }
+     }
+     ```
+
+---
+
+### 15. **Float and Clear**  
+   - Float: Align elements.
+     ```css
+     img {
+       float: left;
+     }
+     ```
+   - Clear: Prevent overlap.
+     ```css
+     div {
+       clear: both;
+     }
+     ```
+
+---
+
+### 16. **Flexbox**  
+   - Layout module for alignment.
+     ```css
+     .container {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+     ```
+
+---
+
+### 17. **Grid**  
+   - Two-dimensional layout.
+     ```css
+     .grid {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 10px;
+     }
+     ```
+
+---
+
+### 18. **Transition Property**  
+   - Add smooth changes.
+     ```css
+     button {
+       transition: background-color 0.3s ease;
+     }
+     ```
+
+---
+
+### 19. **Animations in CSS**  
+   - Create keyframes and animations:
+     ```css
+     @keyframes move {
+       from {
+         transform: translateX(0);
+       }
+       to {
+         transform: translateX(100px);
+       }
+     }
+     div {
+       animation: move 2s infinite;
+     }
+     ```
+
+---
+
+### 20. **Object-Fit and Object-Cover**  
+   - Fit media in containers.
+     ```css
+     img {
+       object-fit: cover;
+     }
+     ```
+
+---
+
+### 21. **Filters**  
+   - Apply effects like blur or grayscale.
+     ```css
+     img {
+       filter: grayscale(100%);
+     }
+     ```
+
+---
+
+### 22. **Figma Basics**  
+   - A design tool for creating UI mockups.  
+     - Features: Frames, Components, Prototypes, and Design Grids.  
+     - Allows collaboration and exporting designs for development.  
+
+
+
 ### 1. **JavaScript Variables, Datatypes, and Objects**  
    - **Variables**: Declare using `var`, `let`, or `const`.  
      ```javascript
