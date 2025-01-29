@@ -1,5 +1,5 @@
 # Tasks
-#React Tasks
+# React Tasks
 -----------
 In React interviews, tasks similar to the **counter program** focus on **state management, event handling, and component rendering**. Here are some common tasks:
 
