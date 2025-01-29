@@ -1,4 +1,60 @@
 # Tasks
+#React Tasks
+-----------
+In React interviews, tasks similar to the **counter program** focus on **state management, event handling, and component rendering**. Here are some common tasks:
+
+---
+
+### 🔹 **State & Event Handling Tasks**
+1. **To-Do List App** – Add, remove, and mark tasks as completed using `useState`.
+2. **Form Validation** – Validate user input (e.g., email, password) and show error messages.
+3. **Stopwatch / Timer** – Implement a start/stop/reset timer using `useEffect` and `setInterval`.
+4. **Like/Dislike Button** – Toggle between "Liked" and "Unliked" states.
+5. **Dark Mode Toggle** – Implement a light/dark theme switch using local storage.
+
+---
+
+### 🔹 **API & Data Fetching Tasks**
+6. **Fetch and Display Data** – Fetch user data from an API (e.g., JSONPlaceholder).
+7. **Search & Filter List** – Filter a list of items dynamically as the user types.
+8. **Debounced Search** – Optimize search input using **debounce** (`lodash.debounce` or `setTimeout`).
+9. **Infinite Scrolling** – Load more data as the user scrolls down.
+10. **Auto-Suggestions** – Display suggested items based on user input.
+
+---
+
+### 🔹 **React Component & State Management Tasks**
+11. **Dynamic Table with Sorting** – Display data in a table with sorting (ascending/descending).
+12. **Drag and Drop List** – Allow users to reorder list items (e.g., using `react-beautiful-dnd`).
+13. **Accordion Component** – Expand/collapse sections dynamically.
+14. **Multi-Step Form** – Implement a step-by-step form with navigation.
+15. **Image Carousel** – Create a slideshow that auto-scrolls or changes on button click.
+
+---
+
+### 🔹 **React Hooks & Performance Tasks**
+16. **Use Context API for Global State** – Manage user authentication state globally.
+17. **UseReducer Instead of UseState** – Refactor a counter or form with `useReducer`.
+18. **Lazy Loading Components** – Load heavy components only when needed (`React.lazy` + `Suspense`).
+19. **Memoization with useMemo & useCallback** – Optimize performance in lists or expensive calculations.
+20. **Custom Hook Creation** – Create a custom hook for fetching API data.
+
+---
+
+### 🔹 **Advanced React & Next.js Tasks**
+21. **Protected Routes** – Restrict access to certain pages based on authentication.
+22. **SSR vs CSR in Next.js** – Implement both Server-Side Rendering (`getServerSideProps`) and Client-Side Rendering.
+23. **Pagination** – Implement a paginated list fetching API data.
+24. **WebSockets with React** – Implement real-time chat using WebSockets (`socket.io`).
+25. **Progressive Web App (PWA) Setup** – Convert a React app into a PWA.
+
+---
+
+Would you like solutions or explanations for any specific task? 🚀
+
+
+
+
 1. [Counter](#head1)
 2. [Random Number Generator](#head2)
 3. [Calculator](#head3)
