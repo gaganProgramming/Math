@@ -1537,7 +1537,87 @@ Html
 </html>
 
 ```````````````````````````
+`````````````````````````````````````jsx
+import { useState } from "react";
 
+const SignUpForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    email: "",
+    password: "",
+    phone: "",
+    dob: ""
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let newErrors = {};
+    const nameRegex = /^[a-zA-Z]{1,30}$/;
+    const userRegex = /^[a-zA-Z0-9_]{3,15}$/;
+    const emailRegex = /^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,})$/;
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+    const phoneRegex = /^[7-9][0-9]{9}$/;
+    
+    if (!nameRegex.test(formData.firstName)) newErrors.firstName = "First name must be 1-30 letters.";
+    if (!nameRegex.test(formData.lastName)) newErrors.lastName = "Last name must be 1-30 letters.";
+    if (!userRegex.test(formData.username)) newErrors.username = "Username must be 3-15 chars (letters, numbers, underscores).";
+    if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email address.";
+    if (!passRegex.test(formData.password)) newErrors.password = "Password must have 8+ chars, 1 uppercase, 1 number, 1 special char.";
+    if (!phoneRegex.test(formData.phone)) newErrors.phone = "Phone must be 10 digits, starting with 7-9.";
+    
+    const today = new Date();
+    const birthDate = new Date(formData.dob);
+    const age = today.getFullYear() - birthDate.getFullYear();
+    if (age < 18) newErrors.dob = "You must be at least 18 years old.";
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted successfully!");
+    }
+  };
+
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 className="text-center text-2xl font-bold text-gray-700">Sign Up</h2>
+        <form onSubmit={handleSubmit}>
+          {Object.entries(formData).map(([key, value]) => (
+            <div key={key} className="mb-3">
+              <input
+                type={key === "password" ? "password" : key === "dob" ? "date" : key === "email" ? "email" : "text"}
+                name={key}
+                value={value}
+                onChange={handleChange}
+                placeholder={key.replace(/([A-Z])/g, " $1").trim()}
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+              {errors[key] && <p className="text-red-500 text-sm">{errors[key]}</p>}
+            </div>
+          ))}
+          <button type="submit" className="w-full p-2 bg-green-500 text-white rounded hover:bg-green-600">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default SignUpForm;
+```````````````````````````````````````````
 
 
 
