@@ -100,3 +100,158 @@ Here’s a **concept-wise project list** for a **Frontend Web Developer** role. 
 ---
 
 Would you like recommendations on which projects to prioritize based on your experience level? 🚀
+
+
+
+Here's a **7-day Frontend Developer Interview Preparation Timetable** tailored to help you revise key concepts, practice coding, and build confidence for your interview.  
+
+---
+
+## **Day 1: HTML, CSS & Responsive Design**  
+📌 **Topics to Cover:**  
+- Semantic HTML  
+- Forms & Validation  
+- CSS Flexbox & Grid  
+- Media Queries & Responsive Design  
+- CSS Preprocessors (SCSS/SASS)  
+- Tailwind CSS (since you’ve used it)  
+
+💻 **Practice:**  
+- Build a simple responsive webpage using **HTML, CSS, and Tailwind CSS**.  
+- Try **CSS Battle** challenges: [https://cssbattle.dev](https://cssbattle.dev)  
+
+🔍 **Mock Interview Questions:**  
+- Difference between **block, inline, and inline-block** elements?  
+- Explain **z-index** and stacking context.  
+- How does **position: relative, absolute, fixed, sticky** work?  
+- What are the advantages of using Tailwind CSS?  
+
+---
+
+## **Day 2: JavaScript Fundamentals**  
+📌 **Topics to Cover:**  
+- ES6+ Features (let/const, arrow functions, spread/rest, destructuring)  
+- Closures, Hoisting, Event Loop  
+- Promises & Async/Await  
+- DOM Manipulation  
+- Higher-Order Functions (map, filter, reduce)  
+
+💻 **Practice:**  
+- Solve 5 JavaScript coding problems on **LeetCode** or **CodeWars**.  
+- Implement a **To-Do List App** using Vanilla JS.  
+
+🔍 **Mock Interview Questions:**  
+- What is **event delegation**?  
+- How does **debouncing & throttling** work?  
+- Explain the difference between **== and ===**.  
+- How does **this** keyword work in different contexts?  
+
+---
+
+## **Day 3: Advanced JavaScript & Data Structures**  
+📌 **Topics to Cover:**  
+- Prototypes & Inheritance  
+- Call, Apply, and Bind  
+- Event Loop & Microtasks  
+- Data Structures: Arrays, Objects, Sets, Maps  
+- Time Complexity (Big-O Notation Basics)  
+
+💻 **Practice:**  
+- Implement **deep cloning** of an object.  
+- Solve 5 DS/Algo problems (focusing on Arrays & Strings).  
+
+🔍 **Mock Interview Questions:**  
+- What is **prototypal inheritance**?  
+- How do you **flatten a nested array**?  
+- Difference between **shallow copy and deep copy**?  
+
+---
+
+## **Day 4: React.js Basics & Hooks**  
+📌 **Topics to Cover:**  
+- Functional vs Class Components  
+- Props & State  
+- React Hooks (useState, useEffect, useContext)  
+- JSX & Virtual DOM  
+- Conditional Rendering  
+
+💻 **Practice:**  
+- Build a **Counter App** with `useState`.  
+- Create a **User List App** that fetches data from an API.  
+
+🔍 **Mock Interview Questions:**  
+- Explain the **Virtual DOM** and how it works.  
+- What is **useEffect cleanup function**?  
+- Difference between **controlled and uncontrolled components**?  
+
+---
+
+## **Day 5: React Advanced & State Management**  
+📌 **Topics to Cover:**  
+- Context API & useReducer  
+- React Router  
+- Redux Toolkit (optional)  
+- Performance Optimization (React.memo, useCallback, useMemo)  
+- Lazy Loading & Suspense  
+
+💻 **Practice:**  
+- Implement **React Router** in a small project.  
+- Create a **theme switcher (light/dark mode)** using Context API.  
+
+🔍 **Mock Interview Questions:**  
+- How does **React Router work**?  
+- Difference between **useState and useReducer**?  
+- What is **Reconciliation in React**?  
+
+---
+
+## **Day 6: System Design & Project Architecture**  
+📌 **Topics to Cover:**  
+- Component-Based Architecture  
+- Code Splitting & Lazy Loading  
+- API Design & Best Practices  
+- Web Performance Optimization (Lazy Loading, Image Optimization)  
+- Security (CORS, CSRF, XSS Prevention)  
+
+💻 **Practice:**  
+- Optimize an existing React project for **performance**.  
+- Analyze and improve **SEO** & **Lighthouse Score**.  
+
+🔍 **Mock Interview Questions:**  
+- How do you optimize a React app for **performance**?  
+- Explain **CSR vs SSR vs SSG** in Next.js.  
+- How do you **secure API requests** from frontend?  
+
+---
+
+## **Day 7: Mock Interviews & Behavioral Questions**  
+📌 **Topics to Cover:**  
+- Debugging & Troubleshooting  
+- Soft Skills & Communication  
+- Behavioral Questions (STAR Method)  
+- Mock Interview Practice  
+
+💻 **Practice:**  
+- Take **1-2 mock interviews** on platforms like [Pramp](https://www.pramp.com) or [Interviewing.io](https://www.interviewing.io).  
+- Revise & summarize important concepts in **Flashcards or Notes**.  
+
+🔍 **Mock Interview Questions:**  
+- Tell me about yourself.  
+- Describe a challenging bug you fixed.  
+- How do you keep up with frontend trends?  
+
+---
+
+## **Additional Resources:**  
+📚 **Free Courses:**  
+- [JavaScript.info](https://javascript.info)  
+- [React Docs](https://react.dev/)  
+- [Frontend Interview Handbook](https://www.frontendinterviewhandbook.com/)  
+
+🎯 **Mock Interview Platforms:**  
+- [Pramp](https://www.pramp.com/)  
+- [Interviewing.io](https://www.interviewing.io/)  
+
+---
+
+Let me know if you need modifications! 🚀🔥
