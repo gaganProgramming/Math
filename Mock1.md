@@ -376,7 +376,7 @@ useEffect(() => {
 Used to reference DOM elements or store mutable values without causing re-renders.  
 
 Example:  
-```js
+```jsx
 import { useRef, useEffect } from "react";
 function InputComponent() {
   const inputRef = useRef(null);
