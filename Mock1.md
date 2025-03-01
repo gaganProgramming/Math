@@ -1,6 +1,105 @@
 
 ### **JavaScript Concepts**
 
+
+Here’s a complete reference including **syntax, description, and whether they mutate the original array or not**:  
+
+| **Method**     | **Syntax** | **Description** | **Mutates Original Array?** |
+|---------------|-----------|----------------|--------------------------|
+| **`map()`**   | `array.map(callbackFn)` | Creates a new array by applying a function to each element. | ❌ No |
+| **`filter()`** | `array.filter(callbackFn)` | Returns a new array with elements that match a condition. | ❌ No |
+| **`reduce()`** | `array.reduce(callbackFn, initialValue)` | Reduces array to a single value using a function. | ❌ No |
+| **`shift()`** | `array.shift()` | Removes the first element and returns it. | ✅ Yes |
+| **`unshift()`** | `array.unshift(element1, element2, ...)` | Adds elements to the beginning of the array. | ✅ Yes |
+| **`sort()`** | `array.sort(compareFn)` | Sorts the array in place (default: ascending order). | ✅ Yes |
+| **`includes()`** | `array.includes(value)` | Checks if an array contains a value (returns `true` or `false`). | ❌ No |
+| **`reverse()`** | `array.reverse()` | Reverses the order of the elements in place. | ✅ Yes |
+| **`length`** | `array.length` | Returns the number of elements in the array. | ❌ No (but can be changed to truncate the array) |
+| **`splice()`** | `array.splice(start, deleteCount, item1, item2, ...)` | Adds/removes elements at a specific index. | ✅ Yes |
+| **`slice()`** | `array.slice(start, end)` | Returns a portion of the array as a new array. | ❌ No |
+
+---
+
+### **Examples for Each Method:**
+
+#### **1. `map()` – Transforms Each Element**
+```javascript
+const numbers = [1, 2, 3];
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9]
+```
+
+#### **2. `filter()` – Filters Based on Condition**
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+const evens = numbers.filter(num => num % 2 === 0);
+console.log(evens); // [2, 4]
+```
+
+#### **3. `reduce()` – Reduces to a Single Value**
+```javascript
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log(sum); // 10
+```
+
+#### **4. `shift()` – Removes First Element**
+```javascript
+const fruits = ["apple", "banana", "mango"];
+fruits.shift();
+console.log(fruits); // ["banana", "mango"]
+```
+
+#### **5. `unshift()` – Adds Elements to the Beginning**
+```javascript
+const fruits = ["banana", "mango"];
+fruits.unshift("apple");
+console.log(fruits); // ["apple", "banana", "mango"]
+```
+
+#### **6. `sort()` – Sorts in Ascending Order (Default)**
+```javascript
+const numbers = [4, 2, 9, 1];
+numbers.sort((a, b) => a - b);
+console.log(numbers); // [1, 2, 4, 9]
+```
+
+#### **7. `includes()` – Checks If Value Exists**
+```javascript
+const fruits = ["apple", "banana", "mango"];
+console.log(fruits.includes("banana")); // true
+```
+
+#### **8. `reverse()` – Reverses the Array**
+```javascript
+const numbers = [1, 2, 3, 4];
+numbers.reverse();
+console.log(numbers); // [4, 3, 2, 1]
+```
+
+#### **9. `length` – Gets Array Size**
+```javascript
+const fruits = ["apple", "banana", "mango"];
+console.log(fruits.length); // 3
+```
+
+#### **10. `splice()` – Removes & Inserts Elements**
+```javascript
+const colors = ["red", "green", "blue"];
+colors.splice(1, 1, "yellow"); // Removes "green" and inserts "yellow"
+console.log(colors); // ["red", "yellow", "blue"]
+```
+
+#### **11. `slice()` – Extracts a Portion Without Modifying Original**
+```javascript
+const colors = ["red", "green", "blue", "yellow"];
+const newColors = colors.slice(1, 3);
+console.log(newColors); // ["green", "blue"]
+console.log(colors); // ["red", "green", "blue", "yellow"] (Unchanged)
+```
+
+This should cover all your questions! Let me know if you need more details. 🚀
+
 1. **What is a Pure and Impure Function?**  
    - **Pure Function:** Always produces the same output for the same input and has no side effects.  
    - **Impure Function:** May produce different outputs for the same input and has side effects (e.g., modifying global variables).  
