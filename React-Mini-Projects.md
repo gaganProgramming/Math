@@ -1,4 +1,34 @@
+# For the given api fetch firstName of the users 
+  ``````````````````````````````````````````````````````jsx
+import React, { useState, useEffect } from "react";
 
+const App = () => {
+  const [user, setUser] = useState([]);
+  const apiLink = "https://dummyjson.com/users";
+
+  useEffect(() => {
+    async function fetchAPI() {
+      fetch(apiLink)
+        .then((res) => res.json())
+        .then((res) => setUser(res.users))
+        .catch((err) => console.log(err));
+    }
+    fetchAPI();
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>Hello Code Sandbox</h1>
+      {user?.map((data, i) => {
+        return <p key={i}>{data.firstName}</p>;
+      })}
+    </div>
+  );
+};
+export default App;
+
+
+  ```````````````````````````````````````````````````````
 
 
 Here's the **easiest To-Do List** using **pure React (without localStorage, separate components, or extra styling)**. You can memorize this in **under 10 minutes** and build it in an interview quickly! 🚀  
