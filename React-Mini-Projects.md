@@ -87,6 +87,98 @@ Since you're actively learning, here's a **React Interview Preparation Checklist
 
 ---
 
+# JS script of Handling form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="form">
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name">
+            <input type="email" id="email" placeholder="Email ID">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <p class="error" id="error"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("form");
+        const errorElement = document.getElementById("error");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            const formData = {
+                fname: document.getElementById("fname").value.trim(),
+                lname: document.getElementById("lname").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                phone: document.getElementById("phone").value.trim(),
+            };
+
+            const errorMsg = validate(formData);
+            if (errorMsg) {
+                errorElement.textContent = errorMsg;
+                alert(errorMsg);
+            } else {
+                alert("Form submitted successfully!");
+                errorElement.textContent = "";
+                form.reset(); // Clear form after successful submission
+            }
+        });
+
+        function validate(data) {
+            if (!data.fname) return "First name is required";
+            if (!data.lname) return "Last name is required";
+            if (!/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/.test(data.email)) return "Invalid email format";
+            if (!/^\d{10}$/.test(data.phone)) return "Phone number must be 10 digits";
+            return "";
+        }
+    </script>
+
+</body>
+</html>
+
+
 # Form handling
 
 ```````````````````````````````````````````````jsx
