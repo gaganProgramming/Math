@@ -88,6 +88,8 @@ Since you're actively learning, here's a **React Interview Preparation Checklist
 ---
 
 # JS script of Handling form
+
+`````````````````````````````````````````````````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,6 +179,7 @@ Since you're actively learning, here's a **React Interview Preparation Checklist
 
 </body>
 </html>
+`````````````````````````````````````````````````````````````````````
 
 
 # Form handling
